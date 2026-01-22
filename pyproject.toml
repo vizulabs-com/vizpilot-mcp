@@ -69,11 +69,10 @@ Repository = "https://github.com/vizulabs/vizpilot-mcp"
 Changelog = "https://github.com/vizulabs/vizpilot-mcp/blob/main/CHANGELOG.md"
 
 [project.scripts]
-vizpilot-mcp = "mcp_server.server:main"
-vizpilot-welcome = "mcp_server.__main__:show_welcome"
+vizpilot-mcp = "vizpilot_mcp.server:main"
 
 [tool.setuptools]
-packages = ["mcp_server"]
+packages = ["vizpilot_mcp"]
 
 [tool.setuptools.package-data]
 mcp_server = ["py.typed"]
