@@ -65,10 +65,17 @@ docker-entrypoint.sh
 .Vizwiki/
 SYSDOCS/
 
-# Test files
+# Test files and scripts (not for distribution)
 test_*.py
 test_*.sh
+send_*.py
+setup_*.sh
+update_*.sh
+publish_*.sh
 *.pyc
+
+# MCP config examples (not for distribution)
+mcp_configs/
 
 # OS
 .DS_Store
