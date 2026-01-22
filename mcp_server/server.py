@@ -209,9 +209,9 @@ async def call_tool(name: str, arguments: dict) -> list[TextContent]:
         return [TextContent(type="text", text=json.dumps(error_result, indent=2))]
 
 
-async def main():
+async def async_main():
     """
-    Main entry point for MCP server.
+    Main async entry point for MCP server.
     Runs the server using stdio transport.
     """
     logger.info(f"Starting {MCP_SERVER_NAME} v{MCP_SERVER_VERSION}")
@@ -225,5 +225,12 @@ async def main():
         )
 
 
+def main():
+    """
+    Synchronous entry point for console script.
+    """
+    asyncio.run(async_main())
+
+
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()
