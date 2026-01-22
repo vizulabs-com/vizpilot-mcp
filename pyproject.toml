@@ -70,6 +70,7 @@ Changelog = "https://github.com/vizulabs/vizpilot-mcp/blob/main/CHANGELOG.md"
 
 [project.scripts]
 vizpilot-mcp = "vizpilot_mcp.server:main"
+vizpilot-welcome = "vizpilot_mcp.welcome:show_welcome"
 
 [tool.setuptools]
 packages = ["vizpilot_mcp"]
