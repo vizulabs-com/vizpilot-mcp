@@ -79,6 +79,6 @@ For questions or issues, please:
 
 ## Links
 
-- [Documentation](https://docs.vizpilot.com/mcp)
-- [Website](https://vizpilot.com)
+- [Documentation](https://docs.vizpilot.vizulabs.com/mcp)
+- [Website](https://vizpilot.vizulabs.com)
 - [PyPI](https://pypi.org/project/vizpilot-mcp/)

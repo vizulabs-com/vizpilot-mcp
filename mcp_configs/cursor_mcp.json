@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "vizpilot": {
+      "command": "python",
+      "args": [
+        "-m",
+        "mcp_server.server"
+      ],
+      "env": {
+        "VIZPILOT_API_KEY": "your_api_key_here",
+        "DJANGO_SETTINGS_MODULE": "vizpilot_config.settings",
+        "DATABASE_URL": "postgresql://vizpilot:vizpilot123@localhost:5432/vizpilot_db",
+        "REDIS_URL": "redis://localhost:6379/0"
+      },
+      "cwd": "/path/to/NEXA"
+    }
+  }
+}

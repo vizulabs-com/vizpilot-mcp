@@ -62,8 +62,8 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://vizpilot.com"
-Documentation = "https://docs.vizpilot.com/mcp"
+Homepage = "https://vizpilot.vizulabs.com"
+Documentation = "https://docs.vizpilot.vizulabs.com/mcp"
 Repository = "https://github.com/vizulabs/vizpilot-mcp"
 "Bug Tracker" = "https://github.com/vizulabs/vizpilot-mcp/issues"
 Changelog = "https://github.com/vizulabs/vizpilot-mcp/blob/main/CHANGELOG.md"

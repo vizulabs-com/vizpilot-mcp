@@ -7,7 +7,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 
-[Website](https://vizpilot.com) • [Documentation](https://docs.vizpilot.com/mcp) • [Support](mailto:support@vizulabs.com)
+[Website](https://vizpilot.vizulabs.com) • [Documentation](https://docs.vizpilot.vizulabs.com/mcp) • [Support](mailto:support@vizulabs.com)
 
 </div>
 
@@ -21,8 +21,8 @@ pip install git+https://github.com/vizulabs-com/vizpilot-mcp.git
 
 ### Get Your API Key
 
-1. Sign up at [vizpilot.com](https://vizpilot.com)
-2. Navigate to [Dashboard → API Keys](https://vizpilot.com/dashboard/api-keys)
+1. Sign up at [vizpilot.com](https://vizpilot.vizulabs.com)
+2. Navigate to [Dashboard → API Keys](https://vizpilot.vizulabs.com/dashboard/api-keys)
 3. Generate a new API key
 
 ### Configure Your IDE
@@ -37,7 +37,7 @@ pip install git+https://github.com/vizulabs-com/vizpilot-mcp.git
       "args": ["-m", "mcp_server.server"],
       "env": {
         "VIZPILOT_API_KEY": "your_api_key_here",
-        "VIZPILOT_BASE_URL": "https://api.vizpilot.com"
+        "VIZPILOT_BASE_URL": "https://vizpilot.vizulabs.com"
       }
     }
   }
