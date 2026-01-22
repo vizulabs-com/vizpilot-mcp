@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "vizpilot": {
+      "command": "python",
+      "args": ["-m", "mcp_server.server"],
+      "env": {
+        "VIZPILOT_API_KEY": "your_api_key_here",
+        "VIZPILOT_BASE_URL": "https://api.vizpilot.com"
+      }
+    }
+  }
+}

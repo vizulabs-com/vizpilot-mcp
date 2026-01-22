@@ -1,0 +1,36 @@
+# Include documentation
+include README.md
+include LICENSE
+include CHANGELOG.md
+
+# Include requirements
+include requirements.txt
+
+# Include package data
+recursive-include mcp_server *.py
+recursive-include mcp_server py.typed
+
+# Exclude development files
+exclude .env
+exclude .env.example
+exclude .gitignore
+exclude docker-compose.yml
+exclude Dockerfile
+exclude docker-entrypoint.sh
+
+# Exclude test files
+recursive-exclude tests *
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+
+# Exclude Django-specific files
+recursive-exclude accounts *
+recursive-exclude api *
+recursive-exclude dashboard *
+recursive-exclude protocols *
+recursive-exclude subscriptions *
+recursive-exclude templates *
+recursive-exclude static *
+recursive-exclude media *
+exclude manage.py
+exclude celerybeat-schedule

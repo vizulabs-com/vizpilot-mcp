@@ -1,0 +1,95 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vizpilot-mcp"
+version = "1.0.0"
+description = "VIZPILOT MCP Server - Access development protocols and steering rules in your IDE"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "VizuLabs", email = "support@vizulabs.com"}
+]
+maintainers = [
+    {name = "VizuLabs Team", email = "support@vizulabs.com"}
+]
+keywords = [
+    "mcp",
+    "model-context-protocol",
+    "ide",
+    "protocols",
+    "development",
+    "vizpilot",
+    "django",
+    "react",
+    "vue",
+    "angular",
+    "nodejs",
+    "python",
+    "javascript",
+    "steering-rules",
+    "ai-assisted-development"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Code Generators",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+]
+
+dependencies = [
+    "requests>=2.31.0",
+    "mcp>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://vizpilot.com"
+Documentation = "https://docs.vizpilot.com/mcp"
+Repository = "https://github.com/vizulabs/vizpilot-mcp"
+"Bug Tracker" = "https://github.com/vizulabs/vizpilot-mcp/issues"
+Changelog = "https://github.com/vizulabs/vizpilot-mcp/blob/main/CHANGELOG.md"
+
+[project.scripts]
+vizpilot-mcp = "mcp_server.server:main"
+
+[tool.setuptools]
+packages = ["mcp_server"]
+
+[tool.setuptools.package-data]
+mcp_server = ["py.typed"]
+
+[tool.black]
+line-length = 100
+target-version = ['py39', 'py310', 'py311', 'py312']
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+asyncio_mode = "auto"
