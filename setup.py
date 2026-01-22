@@ -7,7 +7,6 @@ from setuptools.command.install import install
 from setuptools.command.develop import develop
 import os
 import sys
-import atexit
 
 # Read README for long description
 with open("README.md", "r", encoding="utf-8") as fh:
@@ -99,16 +98,16 @@ class PostInstallCommand(install):
     """Post-installation command to show welcome message"""
     def run(self):
         install.run(self)
-        # Register welcome message to show after installation completes
-        atexit.register(show_welcome_message)
+        # Show welcome message immediately after installation
+        show_welcome_message()
 
 
 class PostDevelopCommand(develop):
     """Post-development installation command to show welcome message"""
     def run(self):
         develop.run(self)
-        # Register welcome message to show after installation completes
-        atexit.register(show_welcome_message)
+        # Show welcome message immediately after installation
+        show_welcome_message()
 
 setup(
     name="vizpilot-mcp",
