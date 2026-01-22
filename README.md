@@ -19,9 +19,16 @@
 # Install the package
 pip install git+https://github.com/vizulabs-com/vizpilot-mcp.git
 
-# View welcome message and setup instructions
+# View setup instructions
 vizpilot-welcome
 ```
+
+The `vizpilot-welcome` command displays:
+- ✅ Installation confirmation
+- 🔑 API key instructions
+- ⚙️ IDE configuration examples
+- 📚 Available MCP tools
+- 🔗 Documentation links
 
 ### Get Your API Key
 
@@ -66,16 +73,20 @@ vizpilot-welcome
 
 See [examples/](examples/) for more IDE configurations.
 
-## � Featuares
+### Restart Your IDE
+
+After configuration, restart your IDE to activate the VIZPILOT MCP server.
+
+## 📚 Features
 
 - **1000+ Development Protocols** - Django, React, Vue, Angular, Node.js, and more
 - **Technology-Specific Steering Rules** - Auto-injected guidance for your IDE
 - **Real-time Protocol Search** - Find protocols instantly across all technologies
 - **Usage Tracking** - Monitor API usage and subscription limits
 - **Secure Authentication** - API key-based access with rate limiting
-- **Caching Support** - Faster responses with intelligent caching
+- **Caching** - Fast responses with intelligent caching
 
-## �️ Available MCP Tools
+## 🛠️ Available MCP Tools
 
 | Tool | Description |
 |------|-------------|
@@ -91,47 +102,68 @@ See [examples/](examples/) for more IDE configurations.
 ### List Available Technologies
 ```python
 # Returns: Django, React, Vue, Angular, Node.js, Python, etc.
-list_technologies(api_key="your_key")
+list_technologies(api_key="your_api_key")
 ```
 
 ### Get Django Protocols
 ```python
 # Returns: All Django-related protocols
-list_protocols(api_key="your_key", technology_slug="django")
+list_protocols(api_key="your_api_key", technology_slug="django")
 ```
 
 ### Search for Authentication Protocols
 ```python
-# Returns: Protocols related to authentication
-search_protocols(api_key="your_key", query="authentication")
+# Returns: All protocols related to authentication
+search_protocols(api_key="your_api_key", query="authentication")
 ```
-
-## 📖 Documentation
-
-- [Installation Guide](https://docs.vizpilot.vizulabs.com/mcp/installation)
-- [Configuration Guide](https://docs.vizpilot.vizulabs.com/mcp/configuration)
-- [Troubleshooting](https://docs.vizpilot.vizulabs.com/mcp/troubleshooting)
-- [API Reference](https://docs.vizpilot.vizulabs.com/mcp/api-reference)
 
 ## 🔄 Updates
 
 ```bash
-# Upgrade to the latest version
 pip install --upgrade git+https://github.com/vizulabs-com/vizpilot-mcp.git
+```
 
-# View welcome message again
+## 🐛 Troubleshooting
+
+### Welcome Message Not Showing During Installation?
+
+This is normal! Pip suppresses output from setup.py. Run this command to view setup instructions:
+
+```bash
 vizpilot-welcome
 ```
 
-## 🐛 Issues & Support
+### Can't Find vizpilot-welcome Command?
+
+Make sure Python's bin directory is in your PATH:
+
+```bash
+# Check if it's installed
+pip show vizpilot-mcp
+
+# Try running directly
+python -m mcp_server.__main__
+```
+
+### MCP Server Not Connecting?
+
+1. Verify your API key is correct
+2. Check IDE configuration file location
+3. Restart your IDE after configuration changes
+4. Check IDE logs for error messages
+
+## 📖 Documentation
+
+- [Full Documentation](https://docs.vizpilot.vizulabs.com/mcp)
+- [API Reference](https://docs.vizpilot.vizulabs.com/mcp/api)
+- [IDE Setup Guides](https://docs.vizpilot.vizulabs.com/mcp/setup)
+- [Troubleshooting Guide](https://docs.vizpilot.vizulabs.com/mcp/troubleshooting)
+
+## 🤝 Support
 
 - **Issues:** [GitHub Issues](https://github.com/vizulabs-com/vizpilot-mcp/issues)
 - **Email:** support@vizulabs.com
-- **Documentation:** [docs.vizpilot.vizulabs.com](https://docs.vizpilot.vizulabs.com/mcp)
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+- **Documentation:** [docs.vizpilot.vizulabs.com](https://docs.vizpilot.vizulabs.com)
 
 ## 📄 License
 
@@ -143,7 +175,7 @@ If you find VIZPILOT MCP helpful:
 - ⭐ Star this repository
 - 🐦 Share on social media
 - 📝 Write a review
-- 💬 Join our community
+- 🤝 Contribute to the project
 
 ---
 
@@ -151,6 +183,6 @@ If you find VIZPILOT MCP helpful:
 
 Made with ❤️ by [VizuLabs](https://vizulabs.com)
 
-**[Get Started](https://vizpilot.vizulabs.com)** • **[View Docs](https://docs.vizpilot.vizulabs.com/mcp)** • **[Get Support](mailto:support@vizulabs.com)**
+**[Get Started](https://vizpilot.vizulabs.com)** • **[Documentation](https://docs.vizpilot.vizulabs.com)** • **[Support](mailto:support@vizulabs.com)**
 
 </div>
