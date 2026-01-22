@@ -67,8 +67,14 @@ def show_welcome():
    • search_protocols - Search across all protocols
    • get_user_info - Check your subscription & usage
 
-📖 Documentation: https://docs.vizpilot.vizulabs.com/mcp
-🐛 Issues: https://github.com/vizulabs-com/vizpilot-mcp/issues
+5. Example usage in your IDE:
+   Simply ask your AI assistant:
+   "List all Django protocols from VIZPILOT"
+   "Get the Django authentication protocol"
+   "Search VIZPILOT for React best practices"
+   
+   The MCP tools work automatically in the background!
+
 💬 Support: support@vizulabs.com
 
 Happy coding! 🚀
